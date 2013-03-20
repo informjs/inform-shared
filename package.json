@@ -11,5 +11,9 @@
 
   "license": "MIT",
 
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+
+  "devDependencies": {
+      "coffee-script": "1.6.2"
+  }
 }
