@@ -1,6 +1,6 @@
 CC=coffee
 OUT=lib/notifier
-IN=src/notifier
+IN=src/
 
 all: lib
 	${CC} -o ${OUT} -c ${IN}
