@@ -1,0 +1,15 @@
+{
+  "name": "inform",
+
+  "version": "0.0.0",
+  "description": "A project for informing you about potentially interesting events.",
+
+  "repository": "git://github.com/LimpidTech/inform",
+
+  "author": "Brandon R. Stoner",
+  "author_email": "monokrome@limpidtech.com",
+
+  "license": "MIT",
+
+  "readmeFilename": "README.md"
+}
