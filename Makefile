@@ -1,5 +1,5 @@
 CC=coffee
-OUT=lib/notifier
+OUT=lib/inform
 IN=src/
 
 all: lib
