@@ -13,6 +13,11 @@
 
   "readmeFilename": "README.md",
 
+  "main": "./lib/inform",
+  "bin": "./bin/inform",
+
+  "directories": { "lib": "./lib" },
+
   "devDependencies": {
       "coffee-script": "1.6.2",
       "mocha": "1.8.2",
