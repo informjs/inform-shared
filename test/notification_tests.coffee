@@ -1,4 +1,4 @@
-{Notification} = require 'inform/lib/inform/notification'
+{Notification} = require '../src/notification'
 
 {expect} = require 'chai'
 
