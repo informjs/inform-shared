@@ -23,7 +23,7 @@
         "start": "inform",
         "test": "mocha --reporter spec",
         "prepublish": "make",
-        "preinstall": "make"
+        "postinstall": "make"
     },
 
     "dependencies": {
