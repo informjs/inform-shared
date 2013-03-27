@@ -16,7 +16,7 @@ describe 'Notification', ->
 
       notification = new Notification exampleMessages.string
 
-      expect(notification.set.called).to.equal true
+      expect(notification.set.called).to.be.true
 
       Notification.prototype.set.restore()
 
@@ -25,7 +25,7 @@ describe 'Notification', ->
 
       notification = new Notification
 
-      expect(notification.set.called).to.equal false
+      expect(notification.set.called).to.be.false
 
       Notification.prototype.set.restore()
 
