@@ -63,8 +63,6 @@ describe 'Notification', ->
 
   describe '#send', ->
     it 'should send messages using ØMQ', sinon.test ->
-      notification = new Notification exampleMessages.string
-
       connect = sinon.spy()
       send = sinon.spy()
 
@@ -72,6 +70,7 @@ describe 'Notification', ->
         connect: connect
         send: send
 
+      notification = new Notification exampleMessages.string
       notification.send()
 
       expect(connect.calledOnce).to.be.true
