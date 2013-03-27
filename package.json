@@ -13,8 +13,7 @@
 
     "readmeFilename": "README.md",
 
-    "main": "./lib/inform",
-    "bin": "./bin/inform",
+    "main": "./lib/inform-shared",
 
     "directories": {
         "lib": "./lib"
