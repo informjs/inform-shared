@@ -1,6 +1,7 @@
 {Notification} = require '../src/notification'
 
 {expect} = require 'chai'
+sinon = require 'sinon'
 
 exampleMessages =
   string: 'This is an example message.'
@@ -8,6 +9,16 @@ exampleMessages =
     message: 'This message is an example'
 
 describe 'Notification', ->
+  describe '#constructor', ->
+    it 'should pass provided data to #set', ->
+      sinon.spy Notification.prototype, 'set'
+
+      notification = new Notification exampleMessages.string
+
+      expect(notification.set.called).to.equal true
+
+      Notification.prototype.set.restore()
+
   describe '#set', ->
     it 'should accept a string', ->
       notification = new Notification
