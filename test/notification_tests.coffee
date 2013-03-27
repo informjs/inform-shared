@@ -42,3 +42,10 @@ describe 'Notification', ->
 
       expect(notification.message).to.equal JSON.stringify exampleMessages.object
       expect(typeof notification.message).to.equal 'string'
+
+
+  describe '#get', ->
+    it 'should return a string when set to a string', ->
+      notification = new Notification exampleMessages.string
+
+      expect(notification.get()).to.equal exampleMessages.string

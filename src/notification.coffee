@@ -10,6 +10,8 @@ class Notification
 
     @message = data
 
+  get: -> @message
+
 module.exports = {
   Notification
 }
