@@ -63,3 +63,8 @@ describe 'Notification', ->
       notification = new Notification exampleMessages.object
 
       expect(notification.get()).to.deep.equal exampleMessages.object
+
+    it 'should return an array when set to an array', ->
+      notification = new Notification exampleMessages.array
+
+      expect(notification.get()).to.deep.equal exampleMessages.array
