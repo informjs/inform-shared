@@ -1,10 +1,10 @@
 {
-    "name": "inform",
+    "name": "inform-shared",
 
     "version": "0.0.0",
-    "description": "A project for informing you about potentially interesting events.",
+    "description": "Shared libraries for the inform client and daemon libraries.",
 
-    "repository": "git://github.com/LimpidTech/inform",
+    "repository": "git://github.com/informjs/inform-shared",
 
     "author": "Brandon R. Stoner",
     "author_email": "monokrome@limpidtech.com",
@@ -27,8 +27,7 @@
 
     "dependencies": {
         "lodash": "1.1.0",
-        "zmq": "2.3.0",
-        "prefer": "0.0.41"
+        "zmq": "2.3.0"
     },
 
     "devDependencies": {
