@@ -1,5 +1,5 @@
 CC=coffee
-OUT=lib/inform
+OUT=lib/inform-shared
 IN=src/
 
 all: lib
