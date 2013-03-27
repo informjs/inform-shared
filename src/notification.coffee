@@ -2,7 +2,7 @@ _ = require 'lodash'
 
 class Notification
   constructor: (data) ->
-    @set data
+    if data? then @set data
 
   set: (data) ->
     if _.isObject data

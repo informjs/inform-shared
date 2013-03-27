@@ -19,6 +19,15 @@ describe 'Notification', ->
 
       Notification.prototype.set.restore()
 
+    it 'should not call #set if no data is provided', ->
+      sinon.spy Notification.prototype, 'set'
+
+      notification = new Notification
+
+      expect(notification.set.called).to.equal false
+
+      Notification.prototype.set.restore()
+
   describe '#set', ->
     it 'should accept a string', ->
       notification = new Notification
