@@ -62,17 +62,22 @@ describe 'Notification', ->
       testGet exampleMessages.array
 
   describe '#send', ->
-    it 'should create a pushing socket', ->
+    it 'should send messages using zeromq', sinon.test ->
       notification = new Notification exampleMessages.string
 
-      sinon.spy zmq, 'socket'
+      connect = sinon.spy()
+      send = sinon.spy()
+
+      @mock(zmq).expects('socket').withArgs('push').once().returns
+        connect: connect
+        send: send
 
       notification.send()
 
-      expect(zmq.socket.calledOnce).to.be.true
+      expect(connect.calledOnce).to.be.true
+      expect(connect.calledBefore send).to.be.true
+      expect(connect.firstCall.args.length).to.equal 1
 
-      firstArgument = zmq.socket.firstCall.args[0]
-
-      expect(firstArgument).to.equal 'push'
-
-      zmq.socket.restore()
+      expect(send.calledOnce).to.be.true
+      expect(send.firstCall.args[0]).to.equal notification.message
+      expect(send.firstCall.args.length).to.equal 1

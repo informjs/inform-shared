@@ -10,7 +10,10 @@ class Notification
   get: -> msgpack.unpack @message
 
   send: ->
-    zmq.socket 'push'
+    socket = zmq.socket 'push'
+    socket.connect 'tcp://127.0.0.1:5000'
+
+    socket.send @message
 
 module.exports = {
   Notification
