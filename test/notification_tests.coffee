@@ -32,23 +32,15 @@ describe 'Notification', ->
       Notification.prototype.set.restore()
 
   describe '#set', ->
-    it 'should accept a string', ->
+    testSet = (message) ->
       notification = new Notification
-      notification.set exampleMessages.string
+      notification.set message
 
-      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.string
+      expect(notification.message).to.deep.equal msgpack.pack message
 
-    it 'should accept an object', ->
-      notification = new Notification
-      notification.set exampleMessages.object
-
-      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.object
-
-    it 'should accept an array', ->
-      notification = new Notification
-      notification.set exampleMessages.array
-
-      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.array
+    it 'should accept a string', -> testSet exampleMessages.string
+    it 'should accept an object', -> testSet exampleMessages.object
+    it 'should accept an array', -> testSet exampleMessages.array
 
   describe '#get', ->
     it 'should return a string when set to a string', ->
