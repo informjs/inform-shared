@@ -19,7 +19,8 @@
   "directories": { "lib": "./lib" },
 
    "scripts": {
-       "start": "inform"
+       "start": "inform",
+       "test": "mocha"
    },
 
   "devDependencies": {
