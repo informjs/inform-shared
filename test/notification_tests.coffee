@@ -63,8 +63,8 @@ describe 'Notification', ->
 
   describe '#send', ->
     it 'should send messages using ØMQ', sinon.test ->
-      connect = sinon.spy()
-      send = sinon.spy()
+      connect = @spy()
+      send = @spy()
 
       @mock(zmq).expects('socket').withArgs('push').once().returns
         connect: connect
