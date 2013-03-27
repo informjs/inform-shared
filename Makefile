@@ -1,4 +1,4 @@
-CC=./node_modules/.bin/coffee
+CC=coffee
 OUT=lib/inform-shared
 IN=src/
 
