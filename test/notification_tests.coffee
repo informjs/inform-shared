@@ -6,7 +6,7 @@ sinon = require 'sinon'
 exampleMessages =
   string: 'This is an example message.'
   object:
-    message: 'This message is an example'
+    message: 'This message is an example.'
 
 describe 'Notification', ->
   describe '#constructor', ->
@@ -49,3 +49,8 @@ describe 'Notification', ->
       notification = new Notification exampleMessages.string
 
       expect(notification.get()).to.equal exampleMessages.string
+
+    it 'should return an object when set to an object', ->
+      notification = new Notification exampleMessages.object
+
+      expect(notification.get()).to.deep.equal exampleMessages.object
