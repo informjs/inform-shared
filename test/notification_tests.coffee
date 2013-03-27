@@ -5,11 +5,9 @@ sinon = require 'sinon'
 
 exampleMessages =
   string: 'This is an example message.'
+  array: ['This message is an example.']
   object:
     message: 'This message is an example.'
-  array: [
-    'This message is an example.',
-  ]
 
 describe 'Notification', ->
   describe '#constructor', ->
