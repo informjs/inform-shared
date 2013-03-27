@@ -13,8 +13,8 @@ exampleMessages =
 
 describe 'Notification', ->
   describe '#constructor', ->
-    it 'should pass provided data to #set', ->
-      sinon.spy Notification.prototype, 'set'
+    it 'should pass provided data to #set', sinon.test ->
+      @spy Notification.prototype, 'set'
 
       notification = new Notification exampleMessages.string
 
@@ -22,8 +22,8 @@ describe 'Notification', ->
 
       Notification.prototype.set.restore()
 
-    it 'should not call #set if no data is provided', ->
-      sinon.spy Notification.prototype, 'set'
+    it 'should not call #set if no data is provided', sinon.test ->
+      @spy Notification.prototype, 'set'
 
       notification = new Notification
 
