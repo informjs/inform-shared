@@ -7,6 +7,9 @@ exampleMessages =
   string: 'This is an example message.'
   object:
     message: 'This message is an example.'
+  array: [
+    'This message is an example.',
+  ]
 
 describe 'Notification', ->
   describe '#constructor', ->
@@ -43,6 +46,12 @@ describe 'Notification', ->
       expect(notification.message).to.equal JSON.stringify exampleMessages.object
       expect(typeof notification.message).to.equal 'string'
 
+    it 'should accept an array', ->
+      notification = new Notification
+      notification.set exampleMessages.array
+
+      expect(notification.message).to.equal JSON.stringify exampleMessages.array
+      expect(typeof notification.message).to.equal 'string'
 
   describe '#get', ->
     it 'should return a string when set to a string', ->
