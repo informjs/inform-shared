@@ -15,3 +15,10 @@ describe 'Notification', ->
 
       expect(notification.message).to.equal exampleMessages.string
       expect(typeof notification.message).to.equal 'string'
+
+    it 'should accept an object', ->
+      notification = new Notification
+      notification.set exampleMessages.object
+
+      expect(notification.message).to.equal JSON.stringify exampleMessages.object
+      expect(typeof notification.message).to.equal 'string'
