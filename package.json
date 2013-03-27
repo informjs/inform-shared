@@ -1,32 +1,34 @@
 {
-  "name": "inform",
+    "name": "inform",
 
-  "version": "0.0.0",
-  "description": "A project for informing you about potentially interesting events.",
+    "version": "0.0.0",
+    "description": "A project for informing you about potentially interesting events.",
 
-  "repository": "git://github.com/LimpidTech/inform",
+    "repository": "git://github.com/LimpidTech/inform",
 
-  "author": "Brandon R. Stoner",
-  "author_email": "monokrome@limpidtech.com",
+    "author": "Brandon R. Stoner",
+    "author_email": "monokrome@limpidtech.com",
 
-  "license": "MIT",
+    "license": "MIT",
 
-  "readmeFilename": "README.md",
+    "readmeFilename": "README.md",
 
-  "main": "./lib/inform",
-  "bin": "./bin/inform",
+    "main": "./lib/inform",
+    "bin": "./bin/inform",
 
-  "directories": { "lib": "./lib" },
+    "directories": {
+        "lib": "./lib"
+    },
 
-   "scripts": {
-       "start": "inform",
-       "test": "mocha"
-   },
+    "scripts": {
+        "start": "inform",
+        "test": "mocha"
+    },
 
-  "devDependencies": {
-      "coffee-script": "1.6.2",
-      "mocha": "1.8.2",
-      "chai": "1.5.0",
-      "sinon": "1.6.0"
-  }
+    "devDependencies": {
+        "coffee-script": "1.6.2",
+        "mocha": "1.8.2",
+        "chai": "1.5.0",
+        "sinon": "1.6.0"
+    }
 }
