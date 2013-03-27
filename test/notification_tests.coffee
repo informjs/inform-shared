@@ -1,6 +1,7 @@
 {Notification} = require '../src/notification'
-
 {expect} = require 'chai'
+
+msgpack = require 'msgpack'
 sinon = require 'sinon'
 zmq = require 'zmq'
 
@@ -35,22 +36,19 @@ describe 'Notification', ->
       notification = new Notification
       notification.set exampleMessages.string
 
-      expect(notification.message).to.equal exampleMessages.string
-      expect(notification.message).to.be.a 'string'
+      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.string
 
     it 'should accept an object', ->
       notification = new Notification
       notification.set exampleMessages.object
 
-      expect(notification.message).to.equal JSON.stringify exampleMessages.object
-      expect(notification.message).to.be.a 'string'
+      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.object
 
     it 'should accept an array', ->
       notification = new Notification
       notification.set exampleMessages.array
 
-      expect(notification.message).to.equal JSON.stringify exampleMessages.array
-      expect(notification.message).to.be.a 'string'
+      expect(notification.message).to.deep.equal msgpack.pack exampleMessages.array
 
   describe '#get', ->
     it 'should return a string when set to a string', ->
