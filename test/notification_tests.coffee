@@ -78,8 +78,7 @@ describe 'Notification', ->
 
       expect(zmq.socket.calledOnce).to.be.true
 
-      firstCall = zmq.socket.getCall(0)
-      firstArgument = firstCall.args[0]
+      firstArgument = zmq.socket.firstCall.args[0]
 
       expect(firstArgument).to.equal 'push'
 
