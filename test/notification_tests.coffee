@@ -62,7 +62,7 @@ describe 'Notification', ->
       testGet exampleMessages.array
 
   describe '#send', ->
-    it 'should send messages using zeromq', sinon.test ->
+    it 'should send messages using ØMQ', sinon.test ->
       notification = new Notification exampleMessages.string
 
       connect = sinon.spy()
