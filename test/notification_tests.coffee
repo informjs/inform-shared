@@ -35,21 +35,21 @@ describe 'Notification', ->
       notification.set exampleMessages.string
 
       expect(notification.message).to.equal exampleMessages.string
-      expect(typeof notification.message).to.equal 'string'
+      expect(notification.message).to.be.a 'string'
 
     it 'should accept an object', ->
       notification = new Notification
       notification.set exampleMessages.object
 
       expect(notification.message).to.equal JSON.stringify exampleMessages.object
-      expect(typeof notification.message).to.equal 'string'
+      expect(notification.message).to.be.a 'string'
 
     it 'should accept an array', ->
       notification = new Notification
       notification.set exampleMessages.array
 
       expect(notification.message).to.equal JSON.stringify exampleMessages.array
-      expect(typeof notification.message).to.equal 'string'
+      expect(notification.message).to.be.a 'string'
 
   describe '#get', ->
     it 'should return a string when set to a string', ->
