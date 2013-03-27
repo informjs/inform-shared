@@ -21,7 +21,8 @@
 
     "scripts": {
         "start": "inform",
-        "test": "mocha --reporter spec"
+        "test": "mocha --reporter spec",
+        "prepublish": "make"
     },
 
     "dependencies": {
