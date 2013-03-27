@@ -38,25 +38,28 @@ describe 'Notification', ->
 
       expect(notification.message).to.deep.equal msgpack.pack message
 
-    it 'should accept a string', -> testSet exampleMessages.string
-    it 'should accept an object', -> testSet exampleMessages.object
-    it 'should accept an array', -> testSet exampleMessages.array
+    it 'should accept a string', ->
+      testSet exampleMessages.string
+
+    it 'should accept an object', ->
+      testSet exampleMessages.object
+
+    it 'should accept an array', ->
+      testSet exampleMessages.array
 
   describe '#get', ->
-    it 'should return a string when set to a string', ->
-      notification = new Notification exampleMessages.string
+    testGet = (message) ->
+      notification = new Notification message
+      expect(notification.get()).to.deep.equal message
 
-      expect(notification.get()).to.equal exampleMessages.string
+    it 'should return a string when set to a string', ->
+      testGet exampleMessages.string
 
     it 'should return an object when set to an object', ->
-      notification = new Notification exampleMessages.object
-
-      expect(notification.get()).to.deep.equal exampleMessages.object
+      testGet exampleMessages.object
 
     it 'should return an array when set to an array', ->
-      notification = new Notification exampleMessages.array
-
-      expect(notification.get()).to.deep.equal exampleMessages.array
+      testGet exampleMessages.array
 
   describe '#send', ->
     it 'should create a pushing socket', ->
