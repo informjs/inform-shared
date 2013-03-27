@@ -17,7 +17,7 @@ describe 'Notification', ->
 
       notification = new Notification exampleMessages.string
 
-      expect(notification.set.called).to.be.true
+      expect(notification.set.calledOnce).to.be.true
 
       Notification.prototype.set.restore()
 
@@ -76,7 +76,7 @@ describe 'Notification', ->
 
       notification.send()
 
-      expect(zmq.socket.called).to.be.true
+      expect(zmq.socket.calledOnce).to.be.true
 
       firstCall = zmq.socket.getCall(0)
       firstArgument = firstCall.args[0]
