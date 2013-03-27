@@ -1,4 +1,5 @@
 _ = require 'lodash'
+zmq = require 'zmq'
 
 class Notification
   constructor: (data) ->
@@ -18,6 +19,9 @@ class Notification
     switch @dataType
       when 'json' then return JSON.parse @message
       when 'raw' then return @message
+
+  send: ->
+    zmq.socket 'push'
 
 module.exports = {
   Notification

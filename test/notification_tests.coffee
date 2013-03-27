@@ -2,6 +2,7 @@
 
 {expect} = require 'chai'
 sinon = require 'sinon'
+zmq = require 'zmq'
 
 exampleMessages =
   string: 'This is an example message.'
@@ -66,3 +67,20 @@ describe 'Notification', ->
       notification = new Notification exampleMessages.array
 
       expect(notification.get()).to.deep.equal exampleMessages.array
+
+  describe '#send', ->
+    it 'should create a pushing socket', ->
+      notification = new Notification exampleMessages.string
+
+      sinon.spy zmq, 'socket'
+
+      notification.send()
+
+      expect(zmq.socket.called).to.be.true
+
+      firstCall = zmq.socket.getCall(0)
+      firstArgument = firstCall.args[0]
+
+      expect(firstArgument).to.equal 'push'
+
+      zmq.socket.restore()
