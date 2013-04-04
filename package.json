@@ -1,7 +1,7 @@
 {
     "name": "inform-shared",
 
-    "version": "0.0.1",
+    "version": "0.0.0",
     "description": "Shared libraries for the inform client and daemon libraries.",
 
     "repository": "git://github.com/informjs/inform-shared",
