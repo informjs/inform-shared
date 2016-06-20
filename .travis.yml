@@ -4,5 +4,6 @@ node_js:
   - "4.4"
 
 before_install:
+  - sudo apt-key update -yy
   - sudo apt-get update -yy
   - sudo apt-get install nodejs-dev libzmq3-dev -yy
