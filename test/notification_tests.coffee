@@ -1,9 +1,9 @@
 {Notification} = require '../src/notification'
 {expect} = require 'chai'
 
-msgpack = require 'msgpack'
 sinon = require 'sinon'
 zmq = require 'zmq'
+
 
 exampleMessages =
   string: 'This is an example message.'
@@ -36,7 +36,7 @@ describe 'Notification', ->
       notification = new Notification
       notification.set message
 
-      expect(notification.message).to.deep.equal msgpack.pack message
+      expect(notification.message).to.deep.equal JSON.stringify message
 
     it 'should accept a string', ->
       testSet exampleMessages.string

@@ -27,8 +27,7 @@
 
     "dependencies": {
         "lodash": "4.13.1",
-        "zmq": "2.15.3",
-        "msgpack": "1.0.2"
+        "zmq": "2.15.3"
     },
 
     "devDependencies": {
