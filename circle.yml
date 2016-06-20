@@ -1,5 +1,6 @@
 dependencies:
   override:
+    - nvm install 4.4
     - nvm use 4.4
     - sudo apt-key update -yy
     - sudo apt-get update -yy
