@@ -1,4 +1,4 @@
-InformJS (shared) [![Build Status](https://travis-ci.org/informjs/inform-shared.png?branch=master)](https://travis-ci.org/informjs/inform-shared)
+InformJS (shared) [![CircleCI](https://circleci.com/gh/informjs/inform-shared.svg?style=svg)](https://circleci.com/gh/informjs/inform-shared)
 =================
 
 Shared libraries for the inform client and daemon libraries.
