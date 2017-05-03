@@ -1,5 +1,5 @@
 _ = require 'lodash'
-zmq = require 'zmq'
+zmq = require 'zeromq'
 
 
 class Notification

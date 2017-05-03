@@ -2,7 +2,7 @@
 {expect} = require 'chai'
 
 sinon = require 'sinon'
-zmq = require 'zmq'
+zmq = require 'zeromq'
 
 
 exampleMessages =
