@@ -1,39 +1,29 @@
 {
-    "name": "inform-shared",
-
-    "version": "0.1.1",
-    "description": "Shared libraries for the inform client and daemon libraries.",
-
-    "repository": "git://github.com/informjs/inform-shared",
-
-    "author": "Brandon R. Stoner",
-    "author_email": "monokrome@limpidtech.com",
-
-    "license": "MIT",
-
-    "readmeFilename": "README.md",
-
-    "main": "./lib/inform-shared",
-
-    "directories": {
-        "lib": "./lib"
-    },
-
-    "scripts": {
-        "start": "inform",
-        "test": "mocha --reporter spec",
-        "prepublish": "make"
-    },
-
-    "dependencies": {
-        "lodash": "4.13.1",
-        "zmq": "2.15.3"
-    },
-
-    "devDependencies": {
-        "coffee-script": "1.10.0",
-        "mocha": "2.5.3",
-        "chai": "3.5.0",
-        "sinon": "1.17.4"
-    }
+  "name": "inform-shared",
+  "version": "0.1.1",
+  "description": "Shared libraries for the inform client and daemon libraries.",
+  "repository": "git://github.com/informjs/inform-shared",
+  "author": "Brandon R. Stoner",
+  "author_email": "monokrome@limpidtech.com",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "main": "./lib/inform-shared",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "start": "inform",
+    "test": "mocha --reporter spec",
+    "prepublish": "make"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "zmq": "^2.15.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
+  }
 }
